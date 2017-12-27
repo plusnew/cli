@@ -5,14 +5,8 @@
   "main": "src/index.tsx",
   "scripts": {
     "start": "mep",
-    "build": "webpack",
+    "build": "webpack -c scripts/webpack.config.js",
     "test": "karma"
-  },
-  "dependencies": {
-    "plusnew": "*"
-  },
-  "devDependencies": {
-    "webpack": "3.10.0"
   },
   "keywords": [
     "plusnew"
