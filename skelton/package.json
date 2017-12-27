@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/index.tsx",
   "scripts": {
-    "start": "mep",
-    "build": "webpack -c scripts/webpack.config.js",
+    "start": "scripts/devserver.js",
+    "build": "webpack --config scripts/webpack.config.js",
     "test": "karma"
   },
   "keywords": [
