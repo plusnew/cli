@@ -15,11 +15,11 @@ function changeProjectname(dest, projectName) {
 }
 
 function installDependencies(dest) {
-  DEPENDENCIES.forEach(installDependency.bind(null, false, dest));
-  DEV_DEPENDENCIES.forEach(installDependency.bind(null, true, dest));
+  DEPENDENCIES.forEach(installDependency.bind(null, dest, false));
+  DEV_DEPENDENCIES.forEach(installDependency.bind(null, dest, true));
 }
 
-function installDependency(dev, dest, package) {
+function installDependency(dest, dev, package) {
   spawnSync('npm', ['install', package, dev ? '--save-dev' : '--save'], { cwd: dest, stdio: 'inherit' })
 }
 
