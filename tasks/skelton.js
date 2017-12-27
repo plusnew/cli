@@ -8,10 +8,15 @@ function copy(source, dest) {
     const sourceFile = path.join(source, file);
     const destFile = path.join(dest, file);
     if (fs.statSync(sourceFile).isDirectory() === true) {
-      fs.mkdirSync(destFile);
+      if (fs.existsSync(destFile) === false) {
+        fs.mkdirSync(destFile);
+      }
+
       copy(sourceFile, destFile);
     } else {
-      fs.copyFileSync(sourceFile, destFile);
+      if (fs.existsSync(destFile) === false) {
+        fs.copyFileSync(sourceFile, destFile);
+      }
     }
   });
   
