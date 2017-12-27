@@ -1,0 +1,21 @@
+{
+  "name": "",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.tsx",
+  "scripts": {
+    "start": "mep",
+    "build": "webpack",
+    "test": "karma"
+  },
+  "dependencies": {
+    "plusnew": "*"
+  },
+  "devDependencies": {
+    "webpack": "3.10.0"
+  },
+  "keywords": [
+    "plusnew"
+  ],
+  "author": ""
+}

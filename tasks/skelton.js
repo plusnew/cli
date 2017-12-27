@@ -13,7 +13,6 @@ function copy(source, dest) {
     } else {
       fs.copyFileSync(sourceFile, destFile);
     }
-    
   });
   
 }
