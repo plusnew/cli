@@ -1,0 +1,1 @@
+    create-plusnew-app destDirectory
