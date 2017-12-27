@@ -3,7 +3,7 @@ const path = require('path');
 const { spawnSync } = require('child_process');
 
 const DEPENDENCIES = ['plusnew'];
-const DEV_DEPENDENCIES = ['webpack','typescript', 'tslint', 'tslint-config-airbnb']
+const DEV_DEPENDENCIES = ['webpack', 'awesome-typescript-loader', 'typescript', 'tslint', 'tslint-config-airbnb']
 
 function changeProjectname(dest, projectName) {
   const packagePath = path.join(dest, 'package.json');
