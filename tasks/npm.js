@@ -4,9 +4,7 @@ const { spawnSync } = require('child_process');
 
 const DEPENDENCIES = ['plusnew'];
 const DEV_DEPENDENCIES = [
-  'webpack',
-  'awesome-typescript-loader',
-  'copy-webpack-plugin',
+  'create-plusnew-app',
   'typescript',
   'tslint',
   'tslint-config-airbnb',

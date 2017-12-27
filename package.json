@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/plusnew/create-plusnew-app#readme",
   "dependencies": {
-    "plusnew": "^0.5.5"
+    "webpack": "^3.10.0"
   },
   "bin": {
     "create-plusnew-app": "./index.js"

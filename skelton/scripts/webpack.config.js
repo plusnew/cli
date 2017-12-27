@@ -1,4 +1,5 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
   entry: './src/index.ts',
@@ -22,5 +23,6 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'public' },
     ]),
+    new TsConfigPathsPlugin()
   ],
 };
