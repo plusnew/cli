@@ -17,6 +17,8 @@
   },
   "homepage": "https://github.com/plusnew/create-plusnew-app#readme",
   "dependencies": {
+    "awesome-typescript-loader": "^3.4.1",
+    "copy-webpack-plugin": "^4.3.1",
     "webpack": "^3.10.0"
   },
   "bin": {
