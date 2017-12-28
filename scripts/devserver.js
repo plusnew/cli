@@ -11,10 +11,10 @@ const WEBPACK_CONFIG_PATH = path.join(process.cwd(), 'scripts', 'webpack.config.
 const INDEX_FILE = 'index.html';
 const ERROR_NOT_FOUND = { code: 404, message: 'not found' };
 
+const log = (err, stat) => console.log(stat.toString({colors: true}));
 const webpackConfig = require(WEBPACK_CONFIG_PATH);
-
-const compiler = webpack(webpackConfig);
-compiler.watch({}, () => {});
+const compiler = webpack(webpackConfig, log);
+compiler.watch({}, log);
 
 const server = http.createServer((request, response) => {
   let target = path.join(compiler.outputPath, request.url);
