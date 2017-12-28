@@ -23,6 +23,8 @@ module.exports = {
     new CopyWebpackPlugin([
       { from: 'public' },
     ]),
-    new TsConfigPathsPlugin()
+    new TsConfigPathsPlugin({
+      tsconfig: __dirname + '/../tsconfig.json',
+    })
   ],
 };
