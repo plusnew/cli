@@ -1,7 +1,7 @@
 import plusnew, { component, store } from 'plusnew';
 
 const component: component = () => {
-  const local = store(0, (state) => state + 1)();
+  const local = store(0, state => state + 1)();
 
   return {
     dependencies: { local },
