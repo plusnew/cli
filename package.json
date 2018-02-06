@@ -1,6 +1,6 @@
 {
   "name": "create-plusnew-app",
-  "version": "0.5.31",
+  "version": "0.5.39",
   "description": "cli client for creating plusnew apps",
   "main": "index.js",
   "scripts": {
@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/plusnew/create-plusnew-app#readme",
   "dependencies": {
-    "copy-webpack-plugin": "^4.3.1",
-    "ts-loader": "^3.2.0",
-    "webpack": "^3.10.0"
+    "copy-webpack-plugin": "4.3.1",
+    "ts-loader": "3.2.0",
+    "webpack": "3.10.0"
   },
   "bin": {
     "create-plusnew-app": "./index.js"
