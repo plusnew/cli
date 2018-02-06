@@ -5,7 +5,7 @@
   "main": "src/index.tsx",
   "scripts": {
     "start": "node_modules/create-plusnew-app/scripts/devserver.js",
-    "build": "webpack --config scripts/webpack.config.js",
+    "build": "webpack --config configs/webpack.config.js",
     "test": "karma"
   },
   "keywords": [
