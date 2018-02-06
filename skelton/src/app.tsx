@@ -1,17 +1,17 @@
 import plusnew, { component, store } from 'plusnew';
 
-const component: component = () => {
-  const local = store(0, state => state + 1);
+const INITIAL_COUNTER_VALUE = 0;
 
-  return {
-    dependencies: { local },
-    render: () =>
-      <div>
-        <button onclick={local.dispatch}>count</button>
-        {local.state}
-      </div>,
-  };
-};
+export default component(
+  // Function who returns all dependencies, when the component should rerender
+  () => ({ counter:  store(INITIAL_COUNTER_VALUE, state: number => state + 1) }),
 
-export default component;
-
+  // The actual stateless renderfunction
+  (props: {}, { counter }) =>
+    <div>
+      <button
+        onclick={(evt: MouseEvent) => counter.dispatch()}
+      />
+      {counter.state}
+    </div>,
+);
