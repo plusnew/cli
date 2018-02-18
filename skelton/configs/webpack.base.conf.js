@@ -1,7 +1,7 @@
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
+  entry: ['./src/index.tsx'],
   output: {
       path: __dirname + '/../dist',
       filename: 'app.js'
