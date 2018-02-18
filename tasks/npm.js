@@ -8,6 +8,13 @@ const DEV_DEPENDENCIES = [
   'typescript',
   'tslint',
   'tslint-config-airbnb',
+  '@types/jasmine',
+  'jasmine-core',
+  'enzyme',
+  'enzyme-adapter-plusnew',
+  'karma',
+  'karma-chrome-launcher',
+  'karma-jasmine',
 ];
 
 function changeProjectname(dest, projectName) {

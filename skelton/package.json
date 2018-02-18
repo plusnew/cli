@@ -2,11 +2,13 @@
   "name": "",
   "version": "1.0.0",
   "description": "",
-  "main": "src/index.tsx",
+  "main": "dist/app.js",
   "scripts": {
-    "start": "node_modules/create-plusnew-app/scripts/devserver.js",
-    "build": "webpack --config scripts/webpack.config.js",
-    "test": "karma"
+    "start": "create-plusnew-app/scripts/devserver.js",
+    "build": "webpack --config configs/webpack.base.conf.js",
+    "build:test": "webpack --config configs/webpack.test.conf.js",
+    "test": "npm run build:test && karma start configs/karma.conf.js --no-auto-watch --single-run",
+    "test:watch": "karma start configs/karma.conf.js"
   },
   "keywords": [
     "plusnew"
