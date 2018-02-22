@@ -1,5 +1,6 @@
 const config = require('./webpack.base.conf.js');
 const path = require('path');
+const webpack = require('webpack');
 const fs = require('fs');
 
 const SOURCE_DIRECTORY = path.join(__dirname, '..', 'src');
@@ -19,7 +20,23 @@ function getTestFiles(dir) {
 
 getTestFiles(SOURCE_DIRECTORY);
 
-config.entry = config.entry.concat(...testfiles);
-config.output.filename = 'app.test.js'
+config.entry = testfiles;
+config.output.filename = 'app.test.js';
+config.watch = false;
+
+config.plugins.push(
+  new webpack.SourceMapDevToolPlugin({
+    filename: null, // if no value is provided the sourcemap is inlined
+    test: /\.(ts|tsx)($|\?)/i // process .js and .ts files only
+  })
+);
+
+config.module.rules.push({
+  enforce: 'post',
+  test: /\.(ts|tsx)$/,
+  loader: 'istanbul-instrumenter-loader',
+  include: path.resolve('src/'),
+  exclude: /\.test\.(ts|tsx)$/,
+});
 
 module.exports = config;

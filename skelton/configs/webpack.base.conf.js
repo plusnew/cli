@@ -16,7 +16,8 @@ module.exports = {
         test: /\.tsx?$/,
         loader: 'ts-loader',
       }
-    ]
+    ],
+    rules: []
   },
   plugins: [
     new CopyWebpackPlugin([

@@ -14,7 +14,10 @@ const DEV_DEPENDENCIES = [
   'enzyme-adapter-plusnew',
   'karma',
   'karma-chrome-launcher',
+  'karma-coverage',
   'karma-jasmine',
+  'karma-sourcemap-loader',
+
 ];
 
 function changeProjectname(dest, projectName) {
