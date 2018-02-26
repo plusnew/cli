@@ -4,7 +4,6 @@ const { spawnSync } = require('child_process');
 
 const DEPENDENCIES = ['plusnew'];
 const DEV_DEPENDENCIES = [
-  'create-plusnew-app',
   'typescript',
   'tslint',
   'tslint-config-airbnb',
@@ -17,7 +16,9 @@ const DEV_DEPENDENCIES = [
   'karma-coverage',
   'karma-jasmine',
   'karma-sourcemap-loader',
-
+  'webpack',
+  'copy-webpack-plugin',
+  'ts-loader'
 ];
 
 function changeProjectname(dest, projectName) {
@@ -30,12 +31,12 @@ function changeProjectname(dest, projectName) {
 }
 
 function installDependencies(dest) {
-  DEPENDENCIES.forEach(installDependency.bind(null, dest, false));
-  DEV_DEPENDENCIES.forEach(installDependency.bind(null, dest, true));
+  installDependency(dest, false, DEPENDENCIES);
+  installDependency(dest, true, DEV_DEPENDENCIES);
 }
 
-function installDependency(dest, dev, package) {
-  spawnSync('npm', ['install', package, dev ? '--save-dev' : '--save'], { cwd: dest, stdio: 'inherit' })
+function installDependency(dest, dev, packages) {
+  spawnSync('npm', ['install', ...packages, dev ? '--save-dev' : '--save'], { cwd: dest, stdio: 'inherit' });
 }
 
 module.exports = function(dest, projectName) {

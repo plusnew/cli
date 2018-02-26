@@ -1,3 +1,4 @@
+const webpack = require('webpack');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 module.exports = {
@@ -11,13 +12,10 @@ module.exports = {
   },
   devtool: 'source-map',
   module: {
-    loaders: [
-      {
-        test: /\.tsx?$/,
-        loader: 'ts-loader',
-      }
-    ],
-    rules: []
+    rules: [{
+      test: /\.tsx?$/,
+      loader: 'ts-loader',
+    }]
   },
   plugins: [
     new CopyWebpackPlugin([

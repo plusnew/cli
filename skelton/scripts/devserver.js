@@ -6,7 +6,7 @@ const fs      = require('fs');
 const webpack = require('webpack');
 
 const PORT = 3000;
-const WEBPACK_CONFIG_PATH = path.join(process.cwd(), 'scripts', 'webpack.base.conf.js');
+const WEBPACK_CONFIG_PATH = path.join(__dirname, '..', 'configs', 'webpack.base.conf.js');
 
 const INDEX_FILE = 'index.html';
 const ERROR_NOT_FOUND = { code: 404, message: 'not found' };

@@ -16,11 +16,7 @@
     "url": "https://github.com/plusnew/create-plusnew-app/issues"
   },
   "homepage": "https://github.com/plusnew/create-plusnew-app#readme",
-  "dependencies": {
-    "copy-webpack-plugin": "4.3.1",
-    "ts-loader": "3.2.0",
-    "webpack": "3.10.0"
-  },
+  "dependencies": {},
   "bin": {
     "create-plusnew-app": "./index.js"
   }

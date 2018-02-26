@@ -22,7 +22,6 @@ getTestFiles(SOURCE_DIRECTORY);
 
 config.entry = testfiles;
 config.output.filename = 'app.test.js';
-config.watch = false;
 
 config.plugins.push(
   new webpack.SourceMapDevToolPlugin({
@@ -31,12 +30,12 @@ config.plugins.push(
   })
 );
 
-config.module.rules.push({
-  enforce: 'post',
-  test: /\.(ts|tsx)$/,
-  loader: 'istanbul-instrumenter-loader',
-  include: path.resolve('src/'),
-  exclude: /\.test\.(ts|tsx)$/,
-});
+// config.module.rules.push({
+//   enforce: 'post',
+//   test: /\.(ts|tsx)$/,
+//   loader: 'istanbul-instrumenter-loader',
+//   include: path.resolve('src/'),
+//   exclude: /\.test\.(ts|tsx)$/,
+// });
 
 module.exports = config;
