@@ -1,6 +1,7 @@
 import plusnew, { component, store } from 'plusnew';
 
 export default component(
+  'App',
   () => ({
     local: store(0, (state, action: number) => state + action),
   }),
