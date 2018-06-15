@@ -6,9 +6,8 @@ import App from './App';
 configure({ adapter: new enzymeAdapterPlusnew() });
 
 describe('test App.tsx', () => {
-  it('true should be true', () => {
+  it('button should be found', () => {
     const wrapper = mount(<App />);
-    expect(wrapper.find(<button />).length).toBe(1);
+    expect(wrapper.containsMatchingElement(<button>count</button>)).toBe(true);
   });
 });
-

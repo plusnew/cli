@@ -16,9 +16,9 @@ const DEV_DEPENDENCIES = [
   'karma-coverage',
   'karma-jasmine',
   'karma-sourcemap-loader',
-  'webpack',
+  'webpack-cli',
   'copy-webpack-plugin',
-  'ts-loader'
+  'awesome-typescript-loader'
 ];
 
 function changeProjectname(dest, projectName) {
