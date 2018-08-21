@@ -8,17 +8,23 @@ const DEV_DEPENDENCIES = [
   'tslint',
   'tslint-config-airbnb',
   '@types/jasmine',
+  '@types/enzyme',
   'jasmine-core',
   'enzyme',
   'enzyme-adapter-plusnew',
   'karma',
   'karma-chrome-launcher',
-  'karma-coverage',
+  'karma-coverage-istanbul-reporter',
+  'karma-webpack',
   'karma-jasmine',
   'karma-sourcemap-loader',
+  'webpack',
   'webpack-cli',
+  'webpack-dev-server',
   'copy-webpack-plugin',
-  'awesome-typescript-loader'
+  'clean-webpack-plugin',
+  'awesome-typescript-loader',
+  'istanbul-instrumenter-loader',
 ];
 
 function changeProjectname(dest, projectName) {
