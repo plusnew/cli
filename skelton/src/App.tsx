@@ -7,7 +7,7 @@ export default component(
     return (
       <div>
         <button onclick={() => local.dispatch(2)}>count</button>
-        <local.Observer render={state => state} />
+        <local.Observer>{state => state}</local.Observer>
       </div>
     );
   },
