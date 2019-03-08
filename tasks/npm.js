@@ -25,6 +25,9 @@ const DEV_DEPENDENCIES = [
   'clean-webpack-plugin',
   'awesome-typescript-loader',
   'istanbul-instrumenter-loader',
+  'css-loader',
+  'sass-loader',
+  'mini-css-extract-plugin'
 ];
 
 function changeProjectname(dest, projectName) {

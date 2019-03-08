@@ -1,6 +1,6 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require("clean-webpack-plugin")
+const CleanWebpackPlugin = require("clean-webpack-plugin").default;
 const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
 
 module.exports = {
@@ -18,6 +18,30 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        use: [
+          MiniCssExtractPlugin.loader,
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: '[local]--[hash:base64:5]',
+              camelCase: true,
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              sourceMap: true,
+              sourceMapContents: false,
+              modules: true,
+              localIdentName: '[local]--[hash:base64:5]',
+            },
+          },
+        ],
+      },
+      {
         test: /\.tsx?$/,
         loader: 'awesome-typescript-loader',
       },
@@ -32,9 +56,8 @@ module.exports = {
       }
     ]),
     new CleanWebpackPlugin('dist', {
-        root: path.join(__dirname, '..'),
-      }
-    ),
+      cleanOnceBeforeBuildPatterns: [path.join(__dirname, '..')],
+    }),
   ],
   externals: [
     function (context, request, callback) {
