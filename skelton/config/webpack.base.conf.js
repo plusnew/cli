@@ -1,7 +1,8 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
-const CleanWebpackPlugin = require("clean-webpack-plugin").default;
+const CleanWebpackPlugin = require('clean-webpack-plugin').default;
 const { TsConfigPathsPlugin } = require('awesome-typescript-loader');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: ['./src/index.tsx'],
@@ -55,8 +56,8 @@ module.exports = {
         to: 'plusnew.js',
       }
     ]),
-    new CleanWebpackPlugin('dist', {
-      cleanOnceBeforeBuildPatterns: [path.join(__dirname, '..')],
+    new CleanWebpackPlugin({
+      cleanOnceBeforeBuildPatterns: [path.join(__dirname, '..', 'dist')],
     }),
   ],
   externals: [

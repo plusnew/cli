@@ -1,6 +1,6 @@
 {
   "name": "create-plusnew-app",
-  "version": "0.6.39",
+  "version": "0.6.41",
   "description": "cli client for creating plusnew apps",
   "main": "index.js",
   "scripts": {
