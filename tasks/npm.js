@@ -4,6 +4,7 @@ const { spawnSync } = require('child_process');
 
 const DEPENDENCIES = ['plusnew'];
 const DEV_DEPENDENCIES = [
+  "@plusnew/simulate-dom-events",
   "@types/enzyme",
   "@types/jasmine",
   "awesome-typescript-loader",

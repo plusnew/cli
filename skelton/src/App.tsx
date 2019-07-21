@@ -15,8 +15,8 @@ export default component(
     return (
       <div>
         <button onclick={() => local.dispatch('increment')}>up</button>
-        <button onclick={() => local.dispatch('down')}>up</button>
-        <local.Observer>{state => state}</local.Observer>
+        <button onclick={() => local.dispatch('decrement')}>down</button>
+        <local.Observer>{state => <span>{state}</span>}</local.Observer>
       </div>
     );
   },

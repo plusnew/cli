@@ -1,5 +1,5 @@
 {
-  "name": "create-plusnew-app",
+  "name": "@plusnew/cli",
   "version": "0.6.50",
   "description": "cli client for creating plusnew apps",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/plusnew/create-plusnew-app.git"
+    "url": "git+https://github.com/plusnew/cli.git"
   },
   "author": "Carlo Jeske",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/plusnew/create-plusnew-app/issues"
+    "url": "https://github.com/plusnew/cli/issues"
   },
-  "homepage": "https://github.com/plusnew/create-plusnew-app#readme",
+  "homepage": "https://github.com/plusnew/cli#readme",
   "dependencies": {},
   "bin": {
     "create-plusnew-app": "./index.js"
