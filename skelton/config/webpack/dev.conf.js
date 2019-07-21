@@ -1,4 +1,4 @@
-const config = require('./webpack.base.conf.js');
+const config = require('./base.conf.js');
 
 module.exports = {
   ...config,
@@ -6,5 +6,6 @@ module.exports = {
   devServer: {
     port: 3000,
     clientLogLevel: "info",
+    historyApiFallback: true,
   }
 }

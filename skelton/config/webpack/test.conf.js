@@ -1,8 +1,6 @@
-const config = require('./webpack.base.conf.js');
+const config = require('./base.conf.js');
 const webpack = require('webpack');
 const path = require('path');
-
-config.externals = {};
 
 config.plugins.push(
   new webpack.SourceMapDevToolPlugin({
@@ -17,6 +15,15 @@ config.module.rules.push({
   loader: 'istanbul-instrumenter-loader',
   include: path.resolve('src/'),
   exclude: /\.test\.(ts|tsx)$/,
+  options: {
+    esModules: true
+  }
 });
 
+config.optimization = {};
+
+config.externals = [
+  //...config.externals,
+  'plusnew',
+]
 module.exports = config;

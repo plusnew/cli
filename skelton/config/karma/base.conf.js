@@ -1,4 +1,4 @@
-var webpackConfig = require("./webpack.test.conf.js");
+var webpackConfig = require("../webpack/test.conf.js");
 var path = require('path');
 
 module.exports = function karmaConfig(config) {
@@ -6,7 +6,7 @@ module.exports = function karmaConfig(config) {
   var configuration = {
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '../src/',
+    basePath: path.join('..', '..', 'src'),
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
@@ -40,7 +40,7 @@ module.exports = function karmaConfig(config) {
 
     coverageIstanbulReporter: {
       reports: ['html', 'lcov', 'text-summary'],
-      dir: path.join(__dirname, '..', 'coverage'),
+      dir: path.join(__dirname, '..', '..', 'coverage'),
     },
 
     // web server port
