@@ -18,6 +18,6 @@
   "homepage": "https://github.com/plusnew/cli#readme",
   "dependencies": {},
   "bin": {
-    "create-plusnew-app": "./index.js"
+    "plusnew": "./index.js"
   }
 }
