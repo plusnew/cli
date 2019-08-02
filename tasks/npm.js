@@ -5,13 +5,12 @@ const { spawnSync } = require('child_process');
 const DEPENDENCIES = ['plusnew'];
 const DEV_DEPENDENCIES = [
   "@plusnew/simulate-dom-events",
-  "@types/enzyme",
+  "@plusnew/enzyme-adapter",
   "@types/jasmine",
   "awesome-typescript-loader",
   "clean-webpack-plugin",
   "css-loader",
   "enzyme",
-  "enzyme-adapter-plusnew",
   "file-loader",
   "html-webpack-plugin",
   "identity-obj-proxy",
