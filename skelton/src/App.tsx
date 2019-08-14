@@ -1,4 +1,4 @@
-import plusnew, { component, store } from 'plusnew';
+import plusnew, { component, store } from '@plusnew/core';
 
 export default component(
   'App',

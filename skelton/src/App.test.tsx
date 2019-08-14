@@ -1,8 +1,8 @@
-import enzymeAdapterPlusnew, { mount } from 'enzyme-adapter-plusnew';
-import { configure } from 'enzyme';
-import plusnew from 'plusnew';
-import App from './App';
+import plusnew from '@plusnew/core';
+import enzymeAdapterPlusnew, { mount } from '@plusnew/enzyme-adapter';
 import { click } from '@plusnew/simulate-dom-events';
+import { configure } from 'enzyme';
+import App from './App';
 
 configure({ adapter: new enzymeAdapterPlusnew() });
 

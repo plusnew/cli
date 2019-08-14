@@ -73,7 +73,7 @@ module.exports = {
       cleanOnceBeforeBuildPatterns: [path.join(__dirname, '..', '..', 'dist')],
     }),
     new HtmlWebpackPlugin({
-      title: 'conduit',
+      title: 'plusnew app',
       inject: 'head',
     }),
     new ScriptExtHtmlWebpackPlugin({
