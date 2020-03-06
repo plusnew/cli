@@ -1,5 +1,5 @@
 to create a new project use this command:
 
 ````
-  plusnew projectDirectory
+  npx @plusnew/cli projectName
 ````
