@@ -5,12 +5,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
-module.exports = {
-  context: path.join(__dirname, '..', '..', 'src'),
+module.exports = (env) => ({
+  context: path.join(__dirname, 'src'),
   entry: ['./index.tsx'],
-  mode: 'development',
+  mode: env.mode,
   output: {
-    path: path.join(__dirname, '..', '..', 'dist'),
+    path: path.join(__dirname, 'dist'),
     filename: 'js/[name].[hash].js',
     chunkFilename: 'js/[name].[hash].bundle.js',
     publicPath: '/'
@@ -84,4 +84,10 @@ module.exports = {
       chunkFilename: 'css/[name].[hash].bundle.css',
     }),
   ],
-};
+
+  devServer: env.mode === 'development' ? {
+    port: 3000,
+    clientLogLevel: "info",
+    historyApiFallback: true,
+  } : undefined,
+});

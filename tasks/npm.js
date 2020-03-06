@@ -2,10 +2,10 @@ const fs = require('fs');
 const path = require('path');
 const { spawnSync } = require('child_process');
 
-const DEPENDENCIES = ['@plusnew/core'];
+const DEPENDENCIES = ['@plusnew/core@beta', '@plusnew/driver-dom'];
 const DEV_DEPENDENCIES = [
   '@plusnew/simulate-dom-events',
-  '@plusnew/enzyme-adapter',
+  '@plusnew/enzyme-adapter@beta',
   '@types/jasmine',
   'awesome-typescript-loader',
   'clean-webpack-plugin',
@@ -14,22 +14,12 @@ const DEV_DEPENDENCIES = [
   'file-loader',
   'html-webpack-plugin',
   'identity-obj-proxy',
-  'istanbul-instrumenter-loader',
-  'jasmine-core',
   'jest',
-  'karma',
-  'karma-chrome-launcher',
-  'karma-coverage-istanbul-reporter',
-  'karma-jasmine',
-  'karma-sourcemap-loader',
-  'karma-webpack',
   'mini-css-extract-plugin',
   'node-sass',
   'sass-loader',
   'script-ext-html-webpack-plugin',
   'ts-jest',
-  'tslint',
-  'tslint-config-airbnb',
   'typescript',
   'webpack',
   'webpack-cli',

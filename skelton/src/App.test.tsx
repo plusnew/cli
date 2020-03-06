@@ -7,25 +7,25 @@ import App from './App';
 configure({ adapter: new enzymeAdapterPlusnew() });
 
 describe('test App.tsx', () => {
-  it('up button should be found and be clickable', () => {
-    const wrapper = mount(<App />);
+	it('up button should be found and be clickable', () => {
+		const wrapper = mount(<App />);
 
-    expect(wrapper.containsMatchingElement(<button>up</button>)).toBe(true);
-    expect(wrapper.find('span').text()).toBe('0');
+		expect(wrapper.containsMatchingElement(<button>up</button>)).toBe(true);
+		expect(wrapper.find('span').text()).toBe('0');
 
-    click(wrapper.find('button').first().getDOMNode() as HTMLElement);
+		click(wrapper.find('button').first().getDOMNode() as HTMLElement);
 
-    expect(wrapper.find('span').text()).toBe('1');
-  });
+		expect(wrapper.find('span').text()).toBe('1');
+	});
 
-  it('down button should be found and be clickable', () => {
-    const wrapper = mount(<App />);
+	it('down button should be found and be clickable', () => {
+		const wrapper = mount(<App />);
 
-    expect(wrapper.containsMatchingElement(<button>down</button>)).toBe(true);
-    expect(wrapper.find('span').text()).toBe('0');
+		expect(wrapper.containsMatchingElement(<button>down</button>)).toBe(true);
+		expect(wrapper.find('span').text()).toBe('0');
 
-    click(wrapper.find('button').last().getDOMNode() as HTMLElement);
+		click(wrapper.find('button').last().getDOMNode() as HTMLElement);
 
-    expect(wrapper.find('span').text()).toBe('-1');
-  });
+		expect(wrapper.find('span').text()).toBe('-1');
+	});
 });
