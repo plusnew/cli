@@ -2,7 +2,7 @@ import plusnew from '@plusnew/core';
 import enzymeAdapterPlusnew, { mount } from '@plusnew/enzyme-adapter';
 import { click } from '@plusnew/simulate-dom-events';
 import { configure } from 'enzyme';
-import App from './App';
+import App from './index';
 
 configure({ adapter: new enzymeAdapterPlusnew() });
 

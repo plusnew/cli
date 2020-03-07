@@ -1,4 +1,5 @@
 import plusnew, { component, store } from '@plusnew/core';
+import style from './app.scss';
 
 export default component('App', () => {
 	const local = store(0, (state, action: 'increment' | 'decrement') => {
@@ -12,7 +13,7 @@ export default component('App', () => {
 	});
 
 	return (
-		<div>
+		<div class={style.container}>
 			<button onclick={() => local.dispatch('increment')}>up</button>
 			<button onclick={() => local.dispatch('decrement')}>down</button>
 			<local.Observer>{(state) => <span>{state}</span>}</local.Observer>
