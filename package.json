@@ -1,6 +1,6 @@
 {
   "name": "@plusnew/cli",
-  "version": "1.0.0-beta.2",
+  "version": "1.0.0",
   "description": "cli client for creating plusnew apps",
   "main": "index.js",
   "scripts": {
