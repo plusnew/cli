@@ -4,7 +4,7 @@
   "description": "cli client for creating plusnew apps",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cd skelton && yarn run test && yarn run build"
   },
   "repository": {
     "type": "git",

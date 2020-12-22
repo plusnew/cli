@@ -5,10 +5,10 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 
-module.exports = (env) => ({
+module.exports = (env, argv) => ({
 	context: path.join(__dirname, 'src'),
 	entry: [ './index.tsx' ],
-	mode: env.mode,
+	mode: argv.mode,
 	output: {
 		path: path.join(__dirname, 'dist'),
 		filename: 'js/[name].[hash].js',
@@ -89,7 +89,7 @@ module.exports = (env) => ({
 	],
 
 	devServer:
-		env.mode === 'development'
+		argv.mode === 'development'
 			? {
 					port: 3000,
 					clientLogLevel: 'info',
