@@ -20,6 +20,7 @@
   "devDependencies": {
     "@plusnew/enzyme-adapter": "^1.1.0",
     "@plusnew/simulate-dom-events": "^0.1.5",
+    "@types/jest": "^26.0.19",
     "awesome-typescript-loader": "^5.2.1",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
